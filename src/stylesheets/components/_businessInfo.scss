@@ -1,0 +1,38 @@
+
+.businessInfo{
+    margin-top: rem(15px);
+    text-transform: uppercase;
+    &-header{
+        background: url('/bizbackground.jpg') no-repeat;
+        height: rem(127px);
+        text-align: center;
+    }
+    &-item {
+        max-width: rem(330px);
+        margin: rem(10px) auto rem(15px);
+    }
+    &-body{
+        text-align: center;
+        padding: rem(15px);
+    }
+    &-address{
+        margin: rem(10px) rem(40px);
+        padding-top: 10px;
+        border-top: 1px solid black;
+    }
+    &-logo{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 10px auto;
+        border: 4px solid $primary-blue;
+    }
+    // &-body{
+    //     &-left{
+    //         width: 30%;
+    //     }
+    //     &-right{
+    //         width: 70%;
+    //     }
+    // }
+}

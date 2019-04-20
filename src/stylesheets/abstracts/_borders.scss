@@ -1,0 +1,10 @@
+.-border-blue-light{
+    border: rem(1px) solid $primary-blue-light;
+    border-radius: rem(5px);
+    overflow: hidden;
+}
+hr{
+    padding: 5px;
+    border: 0;
+    border-top: 1px solid #eee;
+}

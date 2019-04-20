@@ -1,0 +1,78 @@
+.login {
+    &.-center {
+        font-family: 'Lato', sans-serif;
+        background-color: $primary-blue;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-logo {
+        margin-bottom: rem(20px);
+    }
+    &-card {
+        background-color: $white;
+        border-radius: rem(15px);
+        padding: 1.8rem;
+        &>form {
+            display: flex;
+            flex-direction: column;
+        }
+      
+    }
+    .form {
+        &-group {
+            & label {
+                display: block;
+                margin: 0 0 5px;
+                color: rgba(0, 0, 0, 0.6);
+                font-size: rem(12px);
+                font-weight: 500;
+                line-height: 1;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: 700;
+            }
+        }
+        &-item {
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 1.2rem;
+            width: 14rem;
+            border: 1px solid grey;
+            outline: none;
+            display: block;
+            background: rgba(0, 0, 0, 0.1);
+            border: 0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: rem(12px) rem(20px);
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: inherit;
+            transition: 0.3s ease;
+        }
+        &-submit {
+            font-family: 'Lato', sans-serif;
+            color: $white;
+            background-color: $primary-blue;
+            border: none;
+            letter-spacing: 0.1rem;
+            transition: 0.3s opacity ease;
+            cursor: pointer;
+            outline: none;
+            width: 100%;
+            border-radius: 4px;
+            padding: 12px 20px;
+            font-size: inherit;
+            font-weight: 500;
+            line-height: inherit;
+            text-transform: uppercase;
+        }
+        &-submit:hover {
+            opacity: 0.6;
+        }
+    }
+}

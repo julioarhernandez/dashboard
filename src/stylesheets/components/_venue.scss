@@ -1,0 +1,10 @@
+.VenueCard {
+    margin-top: rem(15px);
+    &-item {
+        min-width: rem(330px)
+    }
+    &-email,
+    &-password {
+        margin-bottom: rem(10px);
+    }
+}

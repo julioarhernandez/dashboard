@@ -1,0 +1,18 @@
+
+.header{
+    background-color: $primary-blue;
+    align-items: center;
+    display: flex;
+    padding: rem(15px);
+    &-logo{
+        flex: 1;
+        width: 100%;
+        &-image{
+            max-width: rem(150px);
+
+        }
+    }
+    a{
+        color: $white;
+    }
+}

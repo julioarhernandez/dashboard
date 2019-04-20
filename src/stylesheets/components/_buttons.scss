@@ -1,0 +1,22 @@
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $primary-blue;
+    &-blue {
+        padding: rem(10px) rem(15px);
+        color: white;
+        background-color: $primary-blue;
+    }
+    &-outline-blue {
+        padding: rem(10px) rem(15px);
+    }
+    &.-inline{
+        display: inline-block;
+    }
+    &.-block{
+        display: block;
+        text-align: center;
+    }
+
+}

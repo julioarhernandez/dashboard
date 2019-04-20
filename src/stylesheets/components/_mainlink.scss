@@ -1,0 +1,35 @@
+.mainlink {
+    .list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &-item {
+            flex: 1;
+            flex-basis: 25%;
+            box-sizing: border-box;
+            height: rem(100px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e8e8e8;
+            &.-active {
+                background-color: rgba($primary-blue, 0.8);
+                a {
+                    color: $white;
+                }
+            }
+            border-bottom: 1px solid $primary-blue-light;
+            &:not(:last-child) {
+                border-right: 1px solid $primary-blue-light;
+            }
+            a {
+                text-transform: uppercase;
+                font-size: rem(14px);
+                font-weight: bold;
+                text-decoration: none;
+                color: $primary-blue;
+            }
+        }
+    }
+}

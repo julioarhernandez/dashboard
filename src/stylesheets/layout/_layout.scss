@@ -1,0 +1,21 @@
+.container{
+    padding: 0 rem(15px);
+}
+figure{
+    margin: 0;
+    img{
+        max-width: 100%;
+    }
+}
+.-flex{
+    display: flex;
+}
+.-flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p{
+    margin: 0;
+    padding: 0;
+}

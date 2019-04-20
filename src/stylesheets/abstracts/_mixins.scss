@@ -1,0 +1,13 @@
+@mixin border-radius($radius: 3px) {
+    border-radius: $radius;
+}
+
+@mixin gradient-bg($color) {
+    background-color: $color;
+}
+
+@mixin alert-variant($background, $border, $color) {
+    color: $color;
+    @include gradient-bg($background);
+    border-color: $border;
+}

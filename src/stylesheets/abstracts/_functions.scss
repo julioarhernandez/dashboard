@@ -1,0 +1,15 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+
+@function theme-color($key: "success") {
+    @return map-get($theme-colors, $key);
+}
+@function theme-color-level($color-name: "success", $level: 0) {
+    $color: theme-color($color-name);
+    $color-base: if($level > 0, $black, $white);
+    $level: abs($level);
+
+    @return mix($color-base, $color, $level * $theme-color-interval);
+}

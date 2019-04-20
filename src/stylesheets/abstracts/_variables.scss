@@ -1,0 +1,32 @@
+/* Global variables */
+
+$primary-blue: #0066cc;
+$primary-gray: rgba(0, 0, 0, 0.76);
+$primary-blue-light: rgba($primary-blue, 0.3);
+$primary-black-light: rgba(0, 41, 82, 0.27);
+
+// Alerts and messages
+$error-color: #f8d7da;
+$success-color: #d4edda;
+$info-color: #cce5ff;
+$white: #ffffff;
+$black: #000000;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+        "success":    $success-color,
+        "info":       $info-color,
+        "danger":     $error-color
+), $theme-colors);
+
+$theme-color-interval:              8% !default;
+
+// Alerts
+$alert-border-width:                1px;
+$alert-margin-bottom:               10px;
+$alert-padding-y:                   20px;
+$alert-padding-x:                   20px; 
+
+$alert-bg-level:                    -10 !default;
+$alert-border-level:                -9 !default;
+$alert-color-level:                 6 !default;
