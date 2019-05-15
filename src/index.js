@@ -8,6 +8,7 @@ import Deals from "./components/Deals";
 import DealsDetails from "./components/DealsDetails";
 import Login from "./components/login";
 import Business from "./components/Business";
+import BusinessAdmin from "./components/BusinessAdmin";
 import BusinessNew from "./components/BusinessNew";
 import CardsInfo from "./components/CardsInfo";
 import User from "./components/User";
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route exact path='/users' component={User} />
         <Route exact path='/venue' component={Venue} />
         <Route exact path='/business' component={Business} />
+        <Route exact path='/businessadmin' component={BusinessAdmin} />
         <Route exact path='/newbusiness' component={BusinessNew} />
         <Route exact path='/getcards/:id' component={CardsInfo} />
       </React.Fragment>

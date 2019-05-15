@@ -25,20 +25,20 @@ const Mainlink = (props) => {
                         <div>Account</div>
                     </Link>
                 </li>
+                {props.role === 'root' && 
                 <li className={`list-item ${props.activeClass === 'users' ? activeClass :'' }`}>
                     <Link to="/users">
                         <div className="material-icons">account_circle</div>
                         <div>Users</div>
                     </Link>
-                </li>
+                </li>}
                 {props.role === 'root' && 
                 <li className={`list-item ${props.activeClass === 'venues' ? activeClass :'' }`}>
                     <Link to="/venues">
                         <div className="material-icons">pin_drop</div>
                         <div>venues</div>
                     </Link>
-                </li>
-                }
+                </li>}
             </ul>
         </div>
       </div>

@@ -16,7 +16,7 @@ class Deals extends Component {
     return(
       <React.Fragment>
         <Header {...this.props}/>
-        <Mainlink activeClass="deals"/>
+        <Mainlink activeClass="deals" role={this.props.user.payload.type}/>
         <DealsCards />
       </React.Fragment>
     //   <div className="Deals">

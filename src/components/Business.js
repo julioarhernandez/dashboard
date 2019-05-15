@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import axios from "axios";
+// import axios from "axios";
 import baseUrl from "../helpers/urlHelpers";
 import Header from "./Header";
 import Mainlink from "./Mainlink";
 import BusinessInfo from "./BusinessInfo";
-// import './App.css';
-
-// import AuthService from './components/AuthService';
+import AuthService from './AuthService';
 import withAuth from './withAuth';
-// const Auth = new AuthService();
 
 class Business extends Component {
   constructor(props) {
     super(props);
+    this.Auth = new AuthService();
     this.state = {
       bizs: []
     };
   }
   
   componentDidMount() {
-    axios.get( `${baseUrl}/api/cards/bizs/${this.props.user.payload.userid}`)
-      .then(res => {
-        this.setState({ bizs: res.data });
-      });
+    // Redirect to admin route if admin
+    if (this.props.user.payload.type === 'root'){
+      this.props.history.push('/businessadmin')
+    }else{
+      this.Auth.fetch(`${baseUrl}/api/cards/bizs/${this.props.user.payload.userid}`,{ 
+        method: 'GET'}).then(response => {
+          this.setState({ bizs: response });
+        });
+    }
+    
   }
 
   render() {
