@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import baseUrl from "../helpers/urlHelpers";
 import Header from "./Header";
 import Mainlink from "./Mainlink";
-import BusinessInfo from "./BusinessInfo";
+import BusinessInfoEdit from "./BusinessInfoEdit";
 import AuthService from './AuthService';
 import withAuth from './withAuth';
 
-class Business extends Component {
+class BusinessEdit extends Component {
   constructor(props) {
     super(props);
     this.Auth = new AuthService();
@@ -33,10 +33,10 @@ class Business extends Component {
     return(
       <React.Fragment>
         <Header {...this.props}/>
-        <Mainlink activeClass="deals" role={this.props.user.payload.type}/>
+        <Mainlink activeClass="business" role={this.props.user.payload.type}/>
         {this.state.bizs.map( biz => 
           <React.Fragment>
-            <BusinessInfo {...biz} />
+            <BusinessInfoEdit {...biz} />
           </React.Fragment>
         )}
 
@@ -45,4 +45,4 @@ class Business extends Component {
   }
 }
 
-export default withAuth(Business);
+export default withAuth(BusinessEdit);

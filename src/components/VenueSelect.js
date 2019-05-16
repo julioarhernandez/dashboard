@@ -6,19 +6,6 @@ import baseUrl from '../helpers/urlHelpers';
 
 class VenueSelect extends React.Component {
 
-    // handleChange = (selectedOption) => {
-    //     this.setState({ selectedOption });
-    //     console.log(`Option selected:`, selectedOption);
-    // }
-    componentDidMount(){
-        // this.Auth.fetch(`${baseUrl}/api/cards/listvenues`,{ 
-        //     method: 'GET'}).then(response => {
-        //         this.setState({ data: response });
-        //         let options = this.state.data && this.state.data.map((item) => ({ value: item.veSlug, label: `${item.veSlug} - ${item.veName}` }));
-        //         this.setState({ options: options });
-        //         console.log('options',this.state.options); 
-        //     });
-    }
     render(){
         const { selectedOption, options } = this.props.state;   
         return (

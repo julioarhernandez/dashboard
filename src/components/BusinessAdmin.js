@@ -22,7 +22,7 @@ class BusinessAdmin extends Component {
 
   handleSelectChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
+    // console.log(`Option selected:`, selectedOption);
   }
 
   getVenues = () => {
@@ -31,17 +31,31 @@ class BusinessAdmin extends Component {
           this.setState({ data: response });
           let options = this.state.data && this.state.data.map((item) => ({ value: item.veSlug, label: `${item.veSlug} - ${item.veName}` }));
           this.setState({ options: options });
-          console.log('options',this.state.options); 
+          // console.log('options',this.state.options); 
       });
+  }
+
+  getBizs = (venueSlug) => {
+    this.Auth.fetch(`${baseUrl}/api/cards/venues/${venueSlug}`,{ 
+      method: 'GET'}).then(response => {
+        this.setState({ bizs: response });
+      });
+
+  }
+
+  componentWillUpdate = (nextProps, nextState) => {
+    // just do this when the selected options is not null 
+    // and it's not the same value as in the previous state
+    if (nextState.selectedOption && 
+        nextState.selectedOption.value && 
+        this.state.selectedOption &&
+        this.state.selectedOption.value !== nextState.selectedOption.value){
+      this.getBizs(nextState.selectedOption.value);
+    } 
   }
   
   componentDidMount() {
-    this.getVenues();
-    // Redirect to admin route if admin
-    // this.Auth.fetch(`${baseUrl}/api/cards/bizs/${this.props.user.payload.userid}`,{ 
-    //   method: 'GET'}).then(response => {
-    //     this.setState({ bizs: response });
-    //   });
+    this.getVenues();    
   }
 
   render() {
@@ -50,11 +64,11 @@ class BusinessAdmin extends Component {
         <Header {...this.props}/>
         <Mainlink activeClass="business" role={this.props.user.payload.type}/>
         <VenueSelect handleSelectChange={this.handleSelectChange} state={this.state}/>
-        {/* {this.state.bizs.map( biz => 
+        {this.state.bizs.map( biz => 
           <React.Fragment>
             <BusinessInfo {...biz} />
           </React.Fragment>
-        )} */}
+        )}
 
       </React.Fragment>
   );

@@ -75,7 +75,7 @@ class User extends Component {
                             </div>
                             <div className="UserCard-password">
                                 <label htmlFor="description">Deal description</label>
-                                <input type="password" name="password" id="password" minlength="8" onChange={this.handleChange} value={this.state.password}/>
+                                <input type="password" name="password" id="password" minLength="8" onChange={this.handleChange} value={this.state.password}/>
                             </div>
                         </div>
                         <div className="UserCard-aside">
